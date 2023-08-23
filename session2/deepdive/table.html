@@ -9,13 +9,21 @@
 
         table {
             border-collapse: collapse;
-            width: 400px;
+            /* you can fix it to the width of the page */
+            width: 100%;
         }
 
-        th, td {
+        td {
             border-bottom: 1px solid #727272;
+            text-align: center;
         }
 
+        th {
+            /* changes the vertical alignment */
+            vertical-align: bottom;
+        }
+
+        /* theres a hover function as well for this */
         th:hover {
             background-color: pink;
         }
