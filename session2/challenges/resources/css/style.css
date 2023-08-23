@@ -10,7 +10,42 @@ body {
 
 
 /* Add your CSS script below */
+#main-header {
+    color: blue;
+    background-color: yellow;
+    width: 100%;
 
+}
+
+.box {
+    width: 80%;
+    margin: auto;
+    padding: 1px;
+}
+
+#navigation-bar {
+    background-color: grey;
+    color: white;
+    width: 100%;
+    
+}
+
+#navigation-bar ul {
+    padding: 0;
+}
+
+#navigation-bar li {
+    display: inline;
+    
+}
+
+#navigation-bar a {
+    text-decoration: none;
+    margin-right: 20px;
+    color: white;
+    font-size: 15px;
+
+}
 
 
 /* DO NOT MODIFY THIS */
