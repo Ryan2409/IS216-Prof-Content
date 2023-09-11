@@ -36,7 +36,15 @@
         
         // WRITE YOUR CODE HERE
 
+            for (f of friends){
+                table_data += "<tr>";
 
+                for(item of f){
+                    table_data += "<td>" + item + "</td>";
+                }
+
+                table_data += "</tr>";
+            }
 
         // Once table_data is completed
         // It will be used by JavaScript code below (inside body)
