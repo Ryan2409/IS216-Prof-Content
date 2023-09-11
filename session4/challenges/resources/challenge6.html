@@ -29,7 +29,29 @@
         */
 
         // WRITE YOUR CODE HERE
+        var num = prompt("Enter a no from 1-10");
+        var valid = false;
 
+        if (num){
+            var num = Number(num);
+            if (Number.isInteger(num)){
+                if(num >= 1 && num <= 10){
+                    var valid = true;
+                }
+            }
+        }
+
+        if(valid==false){
+            alert("NOpe");
+        }else{
+            var lucky = Math.floor(Math.random() * 10 + 1);
+
+            if(num == lucky){
+                alert("Lucky no is " + lucky + "OKKK");
+            }else{
+                alert("U got wrong lucky is" + lucky + "OKOKOK");
+            }
+        }
     </script>
 
 </head>
