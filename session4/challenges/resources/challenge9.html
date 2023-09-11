@@ -20,7 +20,16 @@
         function convert_first_letter(str) {
             
             // YOUR CODE GOES HERE
-            
+            var arr = str.split(" ");
+            var res = "";
+            for(word of arr){
+                var first = word[0];
+                var rest = word.slice(1);
+                var first_up = first.toUpperCase();
+                var new_word = first_up + rest;
+                res += new_word + " ";
+            }
+            return res;
         }
 
         
