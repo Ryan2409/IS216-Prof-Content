@@ -61,6 +61,34 @@
 
         // Once table_data is completed
         // It will be used by JavaScript code below (inside body)
+        for( friend_array of friends ) {
+            table_data += "<tr>";
+            var counter = 0;
+
+            for( item of friend_array ) {
+
+                if(counter==1){
+                    if(item=="Female"){
+                        var class_value="female";
+                    }else{
+                        var class_value="male";
+                    }
+                    table_data += "<td class=" +class_value + ">" + item + "</td>";
+                } else if(counter==3){
+                    var class_value = "";
+                    if(item > 50000){
+                        class_value = "rich";
+                    }
+                    table_data += "<td class=" +class_value + ">" + item + "</td>";
+                }else{
+                    table_data += "<td>" + item + "</td>";
+                }
+                counter ++;
+            }
+            
+            table_data += "</tr>";
+            
+        }
 
     </script>
 
