@@ -58,7 +58,61 @@ function display_default() {
     // When displaying "female" stars:
     //  - "Show Male Stars" button must be activated (the user should be able to click on it)
     //  - "Show Female Stars" button must be "disabled" (the user cannot click on it)
+    var gender_index = 0;
+    if(Math.random()<0.5){
+        gender_index = 1;
+    }
+    display_by_gender(gender_index);
 }
+
+
+function display_by_gender(gender_index){
+    var objects = stars_dataset[gender_index];
+    console.log(objects);
+    var count = 1;
+
+    for(person in objects){
+
+        // images, title, innertext
+        console.log(person);
+        console.log(objects[person]);
+
+        let artis_img = objects[person][0];
+        let img = document.getElementById("image"+count);
+        console.log(img);
+        img.setAttribute("src", "images/" + artis_img);
+
+        let artis_name = person;
+        let artis_info = objects[person][1];
+
+        let title = document.getElementById("slide_heading" + count);
+        title.innerText = artis_name;
+
+        let info = document.getElementById("slide_title" + count);
+        info.innerText = artis_info;
+
+        
+
+        // wiki
+        let wiki = document.getElementById("wiki" + count); 
+        let wiki_artis = objects[person][2];
+        wiki.setAttribute("href", wiki_artis);
+        wiki.innerText = person;
+
+
+        count++
+
+        if(gender_index==0){
+            document.getElementById("male_button").disabled = true;
+            document.getElementById("female_button").disabled = false;
+        }else{
+            document.getElementById("female_button").disabled = true;
+            document.getElementById("male_button").disabled = false;
+        }
+    }
+}
+
+
 
 
 
@@ -67,6 +121,7 @@ function display_default() {
 function show_male_stars() {
 
     // YOUR CODE GOES HERE
+    display_by_gender(0);
 
 }
 
@@ -76,5 +131,5 @@ function show_male_stars() {
 function show_female_stars() {
 
     // YOUR CODE GOES HERE
-
+    display_by_gender(1);
 }
