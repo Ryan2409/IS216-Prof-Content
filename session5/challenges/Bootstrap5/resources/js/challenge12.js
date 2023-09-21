@@ -43,6 +43,7 @@ function highlight_words() {
 function show_num_words() {
 
     // YOUR CODE GOES HERE
+    
 }
 
 
