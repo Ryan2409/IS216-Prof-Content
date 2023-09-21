@@ -1,7 +1,7 @@
 // KrazyMLBB API v1.0 - Documentation
 // http://krazywoman.com/krazymlbb/
 
-const YOUTUBE_API_KEY = 'AIzaSyCiXFYHvIBMDt_4DHzPrtHn-1aWgZDKmy8'; // Did you get your YouTube API key?
+const YOUTUBE_API_KEY = ''; // Did you get your YouTube API key?
 
 // When the webpage loads
 // Display all heroes
